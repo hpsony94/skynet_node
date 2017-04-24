@@ -41,8 +41,8 @@ String StrCO;
 String StrTemp;
 String StrDust;
 //Thinkspeak API Key
-//String apiKey = "G1JJIY5JTMO7MLXE";
-String apiKey = "1";
+String apiKey = "G1JJIY5JTMO7MLXE";
+//String apiKey = "1";
 int send_error=0;
 
 int minute = 0;
@@ -152,7 +152,7 @@ void pushData(){
   StrDust = dtostrf( VVoltDust, 3, 2, buf);
   //TCP Connection
   String cmd = "AT+CIPSTART=\"TCP\",\"";
-  cmd += "http://www.codingyourfuture.com"; // api.thingspeak.com
+  cmd += "http://api.thingspeak.com"; // api.thingspeak.com
   cmd +="\",80"; //Connection with port 80
   sim900.println(cmd);
   delay(4000);
